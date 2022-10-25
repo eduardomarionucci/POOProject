@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import br.edu.ifpr.matricula.conexao.Campus;
-import br.edu.ifpr.matricula.conexao.Conexao;
+import br.edu.ifpr.trabalho.poo.conexao.Campus;
+import br.edu.ifpr.trabalho.poo.conexao.Conexao;
 
 public class CampusDAO {
 	// inserção
