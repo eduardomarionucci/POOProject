@@ -35,11 +35,27 @@ public class CampusDAO {
 
 	}
 
+	public static void salvarCampus(Campus campus) {
+		String SQL = "INSERT INTO tb_campus (nome, endereco, cidade) VALUES (?, ?, ?)";
+
+		try {
+			//PreparedStatement é um comando que aumenta a segunça contra ataques de SQLInjection
+			PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(SQL);
+			preparacaoDaInstrucao.setString(1, campus.getNome());
+			preparacaoDaInstrucao.setString(2, campus.getEndereco());
+			preparacaoDaInstrucao.setString(3, campus.getCidade());
+			
+			preparacaoDaInstrucao.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	// transformar
 	public Campus transformarResultSetEmObjeto(ResultSet resultSet) throws SQLException {
 		Campus campus = new Campus();
 		try {
-			campus.setIdCampus(resultSet.getInt("idtb_campus"));
+			campus.setIdCampus(resultSet.getInt("id_campus"));
 			campus.setNome(resultSet.getString("nome"));
 			campus.setEndereco(resultSet.getString("endereco"));
 			campus.setCidade(resultSet.getString("cidade"));
@@ -50,4 +66,5 @@ public class CampusDAO {
 
 		return campus;
 	}
+
 }
