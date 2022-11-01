@@ -1,7 +1,7 @@
 package br.edu.ifpr.trabalho.poo.interfaces;
 
 import java.util.ArrayList;
-import br.edu.ifpr.trabalho.poo.campus.Campus;
+import br.edu.ifpr.trabalho.poo.modelo.Campus;
 import br.edu.ifpr.trabalho.poo.modelo.Aluno;
 import br.edu.ifpr.trabalho.poo.modelo.Curso;
 import br.edu.ifpr.trabalho.poo.modelo.Disciplina;

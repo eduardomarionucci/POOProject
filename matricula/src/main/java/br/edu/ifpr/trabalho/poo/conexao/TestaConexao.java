@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import br.edu.ifpr.acessar.bancodedados.CampusDAO;
+import br.edu.ifpr.trabalho.poo.dao.CampusDAO;
+import br.edu.ifpr.trabalho.poo.modelo.Campus;
 
 public class TestaConexao {
 

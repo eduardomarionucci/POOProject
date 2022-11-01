@@ -1,134 +1,59 @@
 package br.edu.ifpr.trabalho.poo.modelo;
 
-import java.util.ArrayList;
+public class Curso {
 
-import br.edu.ifpr.trabalho.poo.conexao.Campus;
-import br.edu.ifpr.trabalho.poo.interfaces.IBuscaDeDados;
-import br.edu.ifpr.trabalho.poo.interfaces.IInserirDados;
-import br.edu.ifpr.trabalho.poo.interfaces.ILeituraDeDados;
-
-public class Curso implements ILeituraDeDados, IBuscaDeDados, IInserirDados{
-
-	public Aluno lerDadosAluno() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Professor lerDadosProfessor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Curso lerDadosCurso() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Turma lerDadosTurma() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Turma lerDadosTurma(Curso curso) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Disciplina lerDadosDisciplina(Professor professor, Turma turma) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Matricula lerDadosMatricula() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Matricula lerDadosMatricula(Aluno aluno, Turma turma) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Campus lerDadosCampus() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Matricula> buscarMatriculasAtivas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Matricula> buscarTodasMatriculas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Aluno> buscarAlunos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Turma> buscarTurmas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Professor> buscarProfessores() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Disciplina> buscarDisciplinas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<Curso> buscarCursos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ArrayList<br.edu.ifpr.trabalho.poo.campus.Campus> buscarCampi() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void salvarAluno(Aluno aluno) {
-		// TODO Auto-generated method stub
+	private int idCurso;
+	private String nome;
+	private String duracao;
+	private String modalidade;
+	private Campus campus;
+	
+	public Curso() {
 		
 	}
 
-	public void salvarProfessor(Professor professor) {
-		// TODO Auto-generated method stub
-		
+	public Curso(int idCurso, String nome, String duracao, String modalidade, Campus campus) {
+		super();
+		this.idCurso = idCurso;
+		this.nome = nome;
+		this.duracao = duracao;
+		this.modalidade = modalidade;
+		this.campus = campus;
 	}
 
-	public void salvarCurso(Curso curso) {
-		// TODO Auto-generated method stub
-		
+
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDuracao() {
+		return duracao;
+	}
+	public void setDuracao(String endereco) {
+		this.duracao = endereco;
+	}
+	public String getModalidade() {
+		return modalidade;
+	}
+	public void setModalidade(String cidade) {
+		this.modalidade = cidade;
+	}
+	public void setCampus(Campus campus) {
+		this.campus = campus;
+	}
+	public Campus getCampus() {
+		return campus;
 	}
 
-	public void salvarTurma(Turma turma) {
-		// TODO Auto-generated method stub
-		
+	public int getIdCurso() {
+		return idCurso;
 	}
 
-	public void salvarDisciplina(Disciplina disciplina) {
-		// TODO Auto-generated method stub
-		
+	public void setIdCurso(int idCurso) {
+		this.idCurso = idCurso;
 	}
-
-	public void salvarMatricula(Matricula matricula) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void salvarCampus(br.edu.ifpr.trabalho.poo.campus.Campus campus) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 	
 }

@@ -1,6 +1,6 @@
 package br.edu.ifpr.trabalho.poo.interfaces;
 
-import br.edu.ifpr.trabalho.poo.conexao.Campus;
+import br.edu.ifpr.trabalho.poo.modelo.Campus;
 import br.edu.ifpr.trabalho.poo.modelo.Aluno;
 import br.edu.ifpr.trabalho.poo.modelo.Curso;
 import br.edu.ifpr.trabalho.poo.modelo.Disciplina;
