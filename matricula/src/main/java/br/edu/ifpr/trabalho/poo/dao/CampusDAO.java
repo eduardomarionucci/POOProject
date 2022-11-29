@@ -4,14 +4,24 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import br.edu.ifpr.trabalho.poo.modelo.Campus;
 import br.edu.ifpr.trabalho.poo.conexao.Conexao;
 
 public class CampusDAO {
-	// inserção
-	// atualização
-	// remoção
+	public Campus lerDadosCampus() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Informe o nome do campus:");
+		String nome = teclado.nextLine();
+		System.out.println("Informe o endereço do campus:");
+		String endereco = teclado.nextLine();
+		System.out.println("Informe a cidade do campus:");
+		String cidade = teclado.nextLine();
+		Campus campus = new Campus(nome, endereco, cidade);
+		return campus;
+		
+	}
 	public ArrayList<Campus> listar() {
 		ArrayList<Campus> listaDeCampus = new ArrayList<Campus>();
 		String SQL = "SELECT * FROM matricula.tb_campus";
