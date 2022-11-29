@@ -19,7 +19,7 @@ public class TestaAluno {
 
 		Aluno aluno = leitura.lerDadosAluno();
 		AlunoDAO alunoDAO = new AlunoDAO();
-		alunoDAO.salvarAluno(aluno);
+		AlunoDAO.salvarAluno(aluno);
 		ArrayList<Aluno> listarAlunos = alunoDAO.listar();
 		for (Aluno a : listarAlunos) {
 			a.imprimirDados();

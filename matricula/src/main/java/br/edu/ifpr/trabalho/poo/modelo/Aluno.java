@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import br.edu.ifpr.trabalho.poo.interfaces.IBuscaDeDados;
 import br.edu.ifpr.trabalho.poo.interfaces.ILeituraDeDados;
 
-public class Aluno extends Pessoa {
+public final class Aluno extends Pessoa {
 
 	private int idAluno;
 	private int anoIngresso;

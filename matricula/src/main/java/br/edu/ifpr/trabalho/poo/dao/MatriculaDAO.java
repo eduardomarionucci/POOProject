@@ -21,7 +21,7 @@ public class MatriculaDAO {
 		String ra = teclado.nextLine();
 		System.out.println("Informe a data: ");
 		String data = teclado.nextLine();
-		System.out.println("Informe a Situação (APROVADO/REPROVADO)");
+		System.out.println("Informe a Situação (APROVADO = true /REPROVADO = false)");
 		boolean situacao = teclado.nextBoolean();
 		System.out.println("Informe o ID do Aluno:");
 		int idAluno = teclado.nextInt();
@@ -36,7 +36,9 @@ public class MatriculaDAO {
 		matricula.setData(data);
 		matricula.setSituacao(situacao);
 		turma.setIdTurma(idTurma);
+		matricula.setTurma(turma);
 		aluno.setIdAluno(idAluno);
+		matricula.setAluno(aluno);
 
 		return matricula;
 
@@ -45,6 +47,28 @@ public class MatriculaDAO {
 	public ArrayList<Matricula> listar() {
 		ArrayList<Matricula> listaDeMatricula = new ArrayList<Matricula>();
 		String SQL = "SELECT * FROM matricula.tb_matricula";
+
+		try {
+			// executar sql, que retorna um resultSet
+			PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(SQL);
+			// percorrer o resultSet e transformar cada resgistro ara objeto
+			ResultSet resultado = preparacaoDaInstrucao.executeQuery();
+
+			// adicionar cada registro na listaDeMatricula
+			while (resultado.next()) {
+				Matricula matricula = transformarResultSetEmObjeto(resultado);
+				listaDeMatricula.add(matricula);
+			}
+		} catch (Exception e) {
+
+		}
+
+		return listaDeMatricula;
+
+	}
+	public ArrayList<Matricula> listarAtivo() {
+		ArrayList<Matricula> listaDeMatricula = new ArrayList<Matricula>();
+		String SQL = "SELECT * FROM matricula.tb_matricula WHERE situacao = 1";
 
 		try {
 			// executar sql, que retorna um resultSet

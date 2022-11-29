@@ -40,7 +40,7 @@ public class CursoDAO {
 
 	public ArrayList<Curso> listar() {
 		ArrayList<Curso> listaDeCursos = new ArrayList<Curso>();
-		String SQL = "INSERT INTO tb_turma (nome, duracao, modalidade, fk_campus) VALUES (?, ?, ?, ?)";
+		String SQL = "SELECT * FROM matricula.tb_curso";
 
 		try {
 			// executar sql, que retorna um resultSet

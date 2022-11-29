@@ -10,7 +10,7 @@ public class Disciplina {
 
 	private int idDisciplina;
 	private String nome;
-	private String cargaHoraria;
+
 	
 	private Turma turma;
 	private Professor professor;
@@ -19,12 +19,12 @@ public class Disciplina {
 		super();
 	}
 
-	public Disciplina(int idDisciplina, String nome, String cargaHoraria, Disciplina disciplina, Turma turma,
+	public Disciplina(int idDisciplina, String nome, Disciplina disciplina, Turma turma,
 			Professor professor) {
 		super();
 		this.idDisciplina = idDisciplina;
 		this.nome = nome;
-		this.cargaHoraria = cargaHoraria;
+
 		
 		this.turma = turma;
 		this.professor = professor;
@@ -62,13 +62,6 @@ public class Disciplina {
 		this.nome = nome;
 	}
 
-	public String getCargaHoraria() {
-		return cargaHoraria;
-	}
-
-	public void setCargaHoraria(String cargaHoraria) {
-		this.cargaHoraria = cargaHoraria;
-	}
 
 
 }

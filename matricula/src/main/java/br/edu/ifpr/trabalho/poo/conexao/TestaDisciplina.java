@@ -27,7 +27,11 @@ public class TestaDisciplina {
 		ArrayList<Disciplina> listarDisciplina = disciplinaDAO.listar();
 
 		for (Disciplina d : listarDisciplina) {
-			System.out.println(d.getTurma());
+			System.out.println();
+			System.out.println("Nome da Disciplina: " + d.getNome());
+			System.out.println("ID da Turma: " + d.getTurma().getIdTurma());
+			System.out.println("ID do Professor: " + d.getProfessor().getIdProfessor());
+			System.out.println();
 		}
 	}
 }
