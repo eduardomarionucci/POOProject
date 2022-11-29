@@ -1,6 +1,6 @@
 package br.edu.ifpr.trabalho.poo.modelo;
 
-public class Professor extends Pessoa {
+public final class Professor extends Pessoa {
 
 	private int idProfessor;
 	private String siape;

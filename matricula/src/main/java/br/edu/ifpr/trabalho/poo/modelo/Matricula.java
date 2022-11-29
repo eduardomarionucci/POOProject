@@ -7,7 +7,7 @@ public class Matricula {
 	private String data;
 	private boolean situacao;
 	private Turma turma;
-	private Aluno	aluno;
+	private Aluno aluno;
 	
 	
 	public Matricula() {

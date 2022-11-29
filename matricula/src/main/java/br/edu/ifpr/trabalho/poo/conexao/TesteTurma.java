@@ -18,15 +18,15 @@ public class TesteTurma {
 		ImplementacaoInserir insercao = new ImplementacaoInserir();
 
 		Turma turma = leitura.lerDadosTurma();
-		
+
 		TurmaDAO.salvarTurma(turma);
-		
+
 		TurmaDAO turmaDAO = new TurmaDAO();
 		ArrayList<Turma> listarTurma = turmaDAO.listar();
 
 		for (Turma t : listarTurma) {
 			System.out.println(t.getNome());
-			
+
 		}
 	}
 }

@@ -16,7 +16,7 @@ public class TurmaDAO {
 
 		System.out.println("Informe o nome da Turma:");
 		String nome = teclado.nextLine();
-		System.out.println("Informe a número míno da Turma:");
+		System.out.println("Informe a número minimo da Turma:");
 		int numeroMinimo = teclado.nextInt();
 		System.out.println("Informe ano de Ingresso do Curso: ");
 		int anoIngresso = teclado.nextInt();
@@ -30,6 +30,7 @@ public class TurmaDAO {
 		turma.setAnoIngresso(anoIngresso);
 		turma.setNumeroMinimo(numeroMinimo);
 		curso.setIdCurso(idCurso);
+		turma.setCurso(curso);
 
 		return turma;
 

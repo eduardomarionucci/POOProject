@@ -12,21 +12,22 @@ import br.edu.ifpr.trabalho.poo.modelo.Curso;
 
 public class TestaCurso {
 	public static void main(String[] args) {
-		
+
 		ImplementacaoLerDados leitura = new ImplementacaoLerDados();
-		ImplementacaoBusca busca = new ImplementacaoBusca();
-		ImplementacaoInserir insercao = new ImplementacaoInserir();
 		
 		Curso curso = leitura.lerDadosCurso();
-		
+
 		CursoDAO.salvarCurso(curso);
 
 		CursoDAO cursoDAO = new CursoDAO();
 		ArrayList<Curso> listarCurso = cursoDAO.listar();
 
 		for (Curso c : listarCurso) {
-			System.out.println(c.getNome());
-			System.out.println(c.getIdCurso());
+			System.out.println();
+			System.out.println("Nome: " + c.getNome());
+			System.out.println("Duracao: " + c.getDuracao());
+			System.out.println("Modalidade: " + c.getModalidade());
+			System.out.println("ID do Curso" + c.getIdCurso());
 		}
 	}
 }

@@ -34,7 +34,7 @@ public class ProfessorDAO {
 		professor.setDataNascimento(dataNascimento);
 		professor.setSiape(siape);
 		
-
+		
 		return professor;
 
 	}
@@ -83,7 +83,6 @@ public class ProfessorDAO {
 	public Professor transformarResultSetEmObjeto(ResultSet resultSet) throws SQLException {
 		Professor professor = new Professor();
 		try {
-			professor.setIdProfessor(resultSet.getInt("idProfessor"));
 			professor.setNome(resultSet.getString("nome"));
 			professor.setCpf(resultSet.getString("cpf"));
 			professor.setEndereco(resultSet.getString("endereco"));
