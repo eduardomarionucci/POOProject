@@ -2,7 +2,13 @@ package br.edu.ifpr.trabalho.poo.implementacao;
 
 import java.util.ArrayList;
 
+import br.edu.ifpr.trabalho.poo.dao.AlunoDAO;
 import br.edu.ifpr.trabalho.poo.dao.CampusDAO;
+import br.edu.ifpr.trabalho.poo.dao.CursoDAO;
+import br.edu.ifpr.trabalho.poo.dao.DisciplinaDAO;
+import br.edu.ifpr.trabalho.poo.dao.MatriculaDAO;
+import br.edu.ifpr.trabalho.poo.dao.ProfessorDAO;
+import br.edu.ifpr.trabalho.poo.dao.TurmaDAO;
 import br.edu.ifpr.trabalho.poo.interfaces.IBuscaDeDados;
 import br.edu.ifpr.trabalho.poo.modelo.Aluno;
 import br.edu.ifpr.trabalho.poo.modelo.Campus;
@@ -15,43 +21,43 @@ import br.edu.ifpr.trabalho.poo.modelo.Turma;
 public class ImplementacaoBusca implements IBuscaDeDados{
 
 	public ArrayList<Matricula> buscarMatriculasAtivas() {
-		// TODO Auto-generated method stub
-		return null;
+		MatriculaDAO matriculadao = new MatriculaDAO();
+		return matriculadao.listar();
 	}
 
 	public ArrayList<Matricula> buscarTodasMatriculas() {
-		// TODO Auto-generated method stub
-		return null;
+		MatriculaDAO matricula = new MatriculaDAO();
+		return matricula.listar();
 	}
 
 	public ArrayList<Aluno> buscarAlunos() {
-		// TODO Auto-generated method stub
-		return null;
+		AlunoDAO  aluno = new AlunoDAO();
+		return aluno.listar();
 	}
 
 	public ArrayList<Turma> buscarTurmas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		TurmaDAO turma = new TurmaDAO();
+		return turma.listar();
+		}
 
 	public ArrayList<Professor> buscarProfessores() {
-		// TODO Auto-generated method stub
-		return null;
+		ProfessorDAO  professor = new ProfessorDAO();
+		return professor.listar();
 	}
 
 	public ArrayList<Disciplina> buscarDisciplinas() {
-		// TODO Auto-generated method stub
-		return null;
+		DisciplinaDAO disciplina = new DisciplinaDAO();
+		return disciplina.listar();
 	}
 
 	public ArrayList<Curso> buscarCursos() {
-		// TODO Auto-generated method stub
-		return null;
+		CursoDAO curso = new CursoDAO();
+		return curso.listar();
 	}
 
 	public ArrayList<Campus> buscarCampi() {
-		CampusDAO campusDao = new CampusDAO();
-		return campusDao.listar();
+		CampusDAO campus = new CampusDAO();
+		return campus.listar();
 	}
 
 }

@@ -40,8 +40,8 @@ public class Curso {
 	public void setModalidade(String cidade) {
 		this.modalidade = cidade;
 	}
-	public void setCampus(Campus campus) {
-		this.campus = campus;
+	public void setCampus(Campus string) {
+		this.campus = string;
 	}
 	public Campus getCampus() {
 		return campus;
